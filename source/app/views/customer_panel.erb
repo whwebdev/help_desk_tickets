@@ -1,0 +1,16 @@
+<div class="ticket_container">
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Category</th>
+    <th>Subject</th>
+  <tr>
+  <% @tickets.each do |ticket| %>
+  <tr>
+    <td><%= ticket.updated_at %></td>
+    <td><%= ticket.category %></td>
+    <td><a href="/tickets/<%= ticket.id %>"><%= ticket.subject %></a></td>
+  </tr>
+  <% end %>
+</table>
+</div>

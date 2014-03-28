@@ -37,19 +37,21 @@ end
 # add in the Bossman
 staff_num += 1
 
-100.times do
+500.times do
   Ticket.create!(
     customer_id: (1..customer_num).to_a.sample,
     staff_member_id: (1..staff_num).to_a.sample,
-    subject: Faker::Lorem.word,
+    subject: Faker::Lorem.sentence,
     category: Faker::Lorem.word
   )
 end
 
 500.times do
   ticket_ids = Ticket.all.map(&:id)
+  staff_ids = StaffMember.all.map(&:id)
   Message.create!(
     ticket_id: ticket_ids.sample,
+    staff_id: staff_ids.sample,
     message_text: Faker::Lorem.paragraph
   )
 end

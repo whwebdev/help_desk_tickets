@@ -1,0 +1,14 @@
+#top-menu {
+  height: 20px;
+  width: auto;
+  border: 1px solid #000;
+  padding: 20px;
+}
+
+#logo {
+float: left;
+}
+
+#user_menu {
+float: right;
+}

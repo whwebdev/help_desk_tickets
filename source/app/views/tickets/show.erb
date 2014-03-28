@@ -1,0 +1,26 @@
+<div class="panel_container">
+    <form>
+      <div>
+        <p><%= @ticket.customer.full_name %> - <a href="mailto:<%= @ticket.customer.email %>"><%= @ticket.customer.email %></a></p>
+        <p>Updated on: <%= @ticket.updated_at %></p>
+        <p>Created on: <%= @ticket.created_at %></p>
+        <p>Category: <%= @ticket.category %></p>
+        <p>Subject: <%= @ticket.subject %></p>
+      </div>
+
+    <div>
+      Message history:
+      <ul style="list-style: none; padding: 0;">
+        <% @ticket.messages.each do |message| %>
+        <li><%= message.created_at %></li>
+        <li><%= message.message_text %></li>
+        <br>
+        <% end %>
+      </ul>
+      <a href="#">Reply</a>
+      <textarea rows="10" cols="50" name="response"></textarea>
+      <input type="button" value="submit">
+    </div>
+
+    </form>
+</div>
