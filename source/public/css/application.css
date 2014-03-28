@@ -4,6 +4,19 @@
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
-th {
-  text-align: left;
+
+/* top menu */
+#top-menu {
+  height: 20px;
+  width: 100%;
+  border: 1px solid #000;
+  padding: 20px;
+}
+
+#logo {
+float: left;
+}
+
+#user_menu {
+float: right;
 }

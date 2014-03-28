@@ -1,4 +1,4 @@
-![schema](http://i.imgur.com/EZE5zW3.png)
+![schema](http://i.imgur.com/QNQeFRU.png)
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
